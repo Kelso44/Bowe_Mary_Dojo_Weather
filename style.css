@@ -1,0 +1,113 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+}
+
+#mainContent {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightskyblue;
+}
+
+#header {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px black;
+}
+
+#mainContentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.city {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: large;
+    text-shadow: 1px 1px 2px black;
+}
+
+.weatherCard {
+    background-color: whitesmoke;
+    width: 12em;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.temperatures {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+
+.low {
+    color: blue;
+}
+
+.high {
+    color: red;
+}
+
+.weatherDesc {
+    font-size: large;
+}
+
+.day {
+    margin-bottom: 2em;
+    font-size: x-large;
+}
+
+.weatherImg {
+    border-radius: 50%;
+    width: 6em;
+    margin: 0;
+}
+
+#weatherCardContainer { /* Corrected this ID */
+    display: flex;
+    justify-content: space-between;
+}
+
+#tempDropdown {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#cookieTime {
+    border: 2px solid black;
+    position: fixed;
+    width: 1064px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cookie {
+    margin: 0 1em;
+}
+
+#cookieHead {
+    font-size: large;
+    font-weight: bold;
+}
+
+#cookieContent {
+    margin: 0 2em;
+}
+
+#accept {
+    text-align: center;
+    margin: 0 2em;
+    width: 6em;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: lightskyblue;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <div id="navContainer">
+        <div id="nav">
+            <h1 id="header">Dojo Weather</h1>
+            <a class="city" data-city="San Jose" href="#">San Jose</a>
+            <a class="city" data-city="Burbank" href="#">Burbank</a>
+            <a class="city" data-city="Chicago" href="#">Chicago</a>
+            <a class="city" data-city="Dallas" href="#">Dallas</a>
+        </div>
+    </div>
+    <div id="mainContent">
+        <div id="mainContentHeader">
+            <h2 id="selectedCity">San Jose</h2>
+            <form>
+                <label for="tempDropdown">Show temperature in:</label>
+                <select onchange="convertTemperature()" id="tempDropdown">
+                    <option value="°C" selected>°C</option>
+                    <option value="°F">°F</option>
+                </select>
+            </form>
+        </div>
+        <div id="weatherCardContainer">
+            <!-- Weather cards will be updated here dynamically -->
+        </div>
+        <div id="cookieTime">
+            <img id="cookie" alt="cookie img" src="images/cookie.png">
+            <div id="cookieContent">
+                <p id="cookieHead">Stop, cookie time!</p>
+                <p>
+                    Our site uses cookies (sadly not the edible ones),
+                    to personalize content and ads, to provide social media features
+                    and to analyze our traffic.
+                    <a id="readMore" href="#">Read more</a>
+                </p>
+            </div>
+            <button id="accept" type="button">I accept</button>
+        </div>
+    </div>
+</body>
+</html>
