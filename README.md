@@ -1,1 +1,1 @@
-Using OpenWeather API to enhance this web fundamnetals assignment.
+Using OpenWeather API to enhance this web fundamentals assignment.
