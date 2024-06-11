@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '3cc77dece2a21d9d5c7c100d8ad35930'; // Your provided API key
+    const apiKey = '3cc77dece2a21d9d5c7c100d8ad35930';
     const cities = document.querySelectorAll('.city');
     const acceptButton = document.getElementById('accept');
     const tempDropdown = document.getElementById('tempDropdown');
 
-    // Add event listeners to city buttons
     cities.forEach(city => {
         city.addEventListener('click', function(event) {
             event.preventDefault();
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add event listener to temperature dropdown
+
     tempDropdown.addEventListener('change', () => {
         convertTemperature();
     });
@@ -27,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function getWeather(city) {
-        const apiKey = '3cc77dece2a21d9d5c7c100d8ad35930'; // Your provided API key
+        const apiKey = '3cc77dece2a21d9d5c7c100d8ad35930';
         const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-                console.log(`Full API Response for ${city}:`, data); // Log the full response for debugging
+                console.log(`Full API Response for ${city}:`, data);
                 if (data.cod === "200") {
                     console.log(`Weather data for ${city}:`, data); // For debugging purposes
                     updateWeather(data);
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cityElement.textContent = data.city.name;
 
         const weatherCardContainer = document.getElementById('weatherCardContainer');
-        weatherCardContainer.innerHTML = ''; // Clear previous content
+        weatherCardContainer.innerHTML = ''; 
 
         const forecast = data.list.slice(0, 4); // Get weather for today and the next 3 days
 
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '50d': 'images/some_clouds.png', // mist day
             '50n': 'images/some_clouds.png'  // mist night
         };
-        return iconMap[icon] || 'images/some_clouds.png'; // default to some_clouds.png if icon not found
+        return iconMap[icon] || 'images/some_clouds.png'; // default to some_clouds.png if icon not found for weather type
     }
 
     function convertTemperature() {
