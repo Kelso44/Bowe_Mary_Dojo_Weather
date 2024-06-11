@@ -70,7 +70,7 @@ body {
     margin: 0;
 }
 
-#weatherCardContainer { /* Corrected this ID */
+#weatherCardContainer { 
     display: flex;
     justify-content: space-between;
 }
